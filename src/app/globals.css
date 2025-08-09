@@ -1,26 +1,187 @@
-@import "tailwindcss";
+/* ----------------------------------------------------
+   Tailwind
+---------------------------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* ----------------------------------------------------
+   Local Fonts: Agrandir Wide (400 / 700 / 700 italic)
+   檔案位於 public/_assets/fonts/
+---------------------------------------------------- */
+/* Regular (400) */
+@font-face {
+  font-family: 'AgrandirWide';
+  src:
+    url('/_assets/fonts/a4a0aec252c1b95321fc8e63a1240d66.woff2') format('woff2'),
+    url('/_assets/fonts/55b7ff2a48f9b13c08507503912a984e.woff') format('woff'),
+    url('/_assets/fonts/024176a6e267afbddcffdff1c30c12b5.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Bold (700) */
+@font-face {
+  font-family: 'AgrandirWide';
+  src:
+    url('/_assets/fonts/7e50f3afb93cff394bfafbdbc10467a6.woff2') format('woff2'),
+    url('/_assets/fonts/1c9593a356e05960587f50f7b52217a1.woff') format('woff'),
+    url('/_assets/fonts/e70535a00d58cf14a149e896907be211.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Bold Italic (700 italic) */
+@font-face {
+  font-family: 'AgrandirWide';
+  src: url('/_assets/fonts/f7dbc8fdf1e339de64dafd23661fcb65.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ----------------------------------------------------
+   Arimo (Regular / Bold / Italic / Bold Italic)
+---------------------------------------------------- */
+@font-face {
+  font-family: 'Arimo';
+  src: url('/_assets/fonts/daee28464eba92254cb149feea6599e3.otf') format('opentype'); /* Regular */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arimo';
+  src: url('/_assets/fonts/0bb563f2f60ffd4e62b64cb021c33776.otf') format('opentype'); /* Bold */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arimo';
+  src: url('/_assets/fonts/79d14bb61301a10c73c6cb293c29b309.otf') format('opentype'); /* Italic */
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arimo';
+  src: url('/_assets/fonts/4de29305db46625343735e840e3d27.otf') format('opentype'); /* Bold Italic */
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ----------------------------------------------------
+   Agrandir（非 Wide）
+---------------------------------------------------- */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('/_assets/fonts/fee9f968b0536b2cf47394f081597ab0.otf') format('opentype'); /* Regular */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Agrandir';
+  src: url('/_assets/fonts/1fcb505c6b693bf40beb4fbed6b70fde.otf') format('opentype'); /* Bold */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ----------------------------------------------------
+   字體變數與品牌色票
+---------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 字體 fallback（繁體優先） */
+  --fallback-tc: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei',
+                 'Heiti TC', 'PMingLiU', 'Helvetica Neue', Arial, sans-serif;
+  --font-agrandir-wide: 'AgrandirWide', var(--fallback-tc);
+  --font-agrandir: 'Agrandir', var(--fallback-tc);
+  --font-arimo: 'Arimo', var(--fallback-tc);
+
+  /* 品牌色票 */
+  --brand-blue: #004a98;
+  --neon-green: #b3fd71;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ----------------------------------------------------
+   Base
+---------------------------------------------------- */
+html {
+  font-family: var(--font-agrandir-wide);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-agrandir-wide);
+  background-color: #000; /* black */
+  color: #fff;            /* white */
+}
+
+/* ----------------------------------------------------
+   語系專用
+---------------------------------------------------- */
+:lang(zh-Hant), :lang(zh-TW), :lang(zh-HK) {
+  font-family: var(--font-agrandir), var(--fallback-tc);
+}
+:lang(th) {
+  font-family: var(--font-arimo), 'Noto Sans Thai', 'Th Sarabun New', 'Leelawadee UI', Tahoma, var(--fallback-tc);
+}
+
+/* ----------------------------------------------------
+   Utilities / Helpers
+---------------------------------------------------- */
+
+/* 背景覆蓋全區域（影片或圖片） */
+.bg-cover-video,
+.bg-cover-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 主要內容層級控制 */
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* 柔和暈影（可讀性） */
+.soft-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(62% 60% at 50% 40%, rgba(0,0,0,0) 0%, rgba(0,23,60,0.18) 55%, rgba(0,23,60,0.48) 100%);
+  z-index: 1;
+}
+
+/* 細微噪點（可選） */
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/_assets/noise.png"); /* 若沒有可先略過 */
+  opacity: .08;
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+/* Section 2 專用漸層洗染 */
+.section2-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,34,74,.1) 0%, rgba(0,34,74,.55) 90%);
+  z-index: 2;
 }
