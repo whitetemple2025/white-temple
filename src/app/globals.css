@@ -200,6 +200,6 @@ body {
   position:absolute; border-radius:9999px; filter: blur(48px);
   mix-blend-mode: normal; pointer-events:none; z-index:1;
 }
-.glow-a{ animation:glow-drift-a 18s ease-in-out infinite alternate; }
-.glow-b{ animation:glow-drift-b 22s ease-in-out infinite alternate; }
+.glow-a{ animation:glow-drift-a 10s ease-in-out infinite alternate; }
+.glow-b{ animation:glow-drift-b 14s ease-in-out infinite alternate; }
 

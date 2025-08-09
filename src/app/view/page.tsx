@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/lib/supabaseClient";
+import { VIDEO } from "@/lib/media"; // ← 新增：集中管理影片網址
 
 interface Message {
   id: number;
@@ -80,14 +81,14 @@ export default function ViewPage() {
       className="relative min-h-dvh overflow-hidden"
       style={{ fontFamily: "var(--font-agrandir-wide)" }}
     >
-{/* 固定右上角返回按鈕 */}
-<a
-  href="/"
-  className="fixed top-6 right-6 z-20 text-sm font-medium underline underline-offset-4 hover:opacity-80 transition-opacity"
-  style={{ color: "#004a98" }}
->
-  &lt; Return to Temple
-</a>
+      {/* 固定右上角返回按鈕 */}
+      <a
+        href="/"
+        className="fixed top-6 right-6 z-20 text-sm font-medium underline underline-offset-4 hover:opacity-80 transition-opacity"
+        style={{ color: "#004a98" }}
+      >
+        &lt; Return to Temple
+      </a>
 
       {/* 背景影片與備援圖片 */}
       <video
@@ -99,7 +100,7 @@ export default function ViewPage() {
         preload="metadata"
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        src="/water.mp4"
+        src={VIDEO.WATER}  // ← 改用 Supabase 公開網址（含 ?v= 版本）
         onError={() => {
           if (videoRef.current) videoRef.current.style.display = "none";
           if (imgRef.current) imgRef.current.style.display = "block";

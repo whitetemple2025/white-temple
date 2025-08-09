@@ -1,7 +1,9 @@
+// src/app/confess/page.tsx
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { VIDEO } from '@/lib/media'; // ← 新增：集中管理影片網址
 
 export default function ConfessPage() {
   const [name, setName] = useState('');
@@ -135,7 +137,7 @@ export default function ConfessPage() {
         preload="metadata"
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        src="/confess.mp4"
+        src={VIDEO.CONFESS} // ← 改這裡
       />
       <div
         className="absolute inset-0"
