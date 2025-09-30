@@ -35,7 +35,7 @@ export default function HomepageMain() {
           preload="metadata"
           aria-hidden
           className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          src={VIDEO.temple}
+          src={VIDEO.TEMPLE}
           style={{ filter: "brightness(0.92) contrast(1.08) saturate(1.18)" }}
         />
         {/* 薄霧提對比 */}
