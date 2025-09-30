@@ -118,7 +118,7 @@ export default function HomepageMain() {
           preload="metadata"
           aria-hidden
           className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          src={VIDEO.DOCTRINES}
+          src={VIDEO.TELE}
           style={{ filter: "saturate(1.08) contrast(1.06) brightness(0.98)" }}
         />
         <div className="soft-vignette" aria-hidden />
@@ -242,6 +242,10 @@ export default function HomepageMain() {
                 <br className="hidden md:block" />
                 Experience the space between data and divinity.
               </p>
+               {/* Post-show Talk 補充訊息 */}
+  <p className="mt-6 text-sm md:text-base font-semibold text-white/90">
+    **Post-show Talk · November 14 · After the performance
+  </p>
             </div>
 
             <div className="flex flex-col gap-4 md:gap-5 md:items-end self-end">
@@ -416,17 +420,39 @@ export default function HomepageMain() {
       <p className="text-lg">WHITETEMPLE2025@GMAIL.COM</p>
     </div>
 
-    {/* Social */}
+   {/* Social */}
 <div className="mb-12">
   <p className="uppercase font-bold text-sm tracking-widest">Social</p>
   <div className="flex gap-6 mt-3">
-    <a href="#" aria-label="Instagram">
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/whitetemple2025/"
+      aria-label="Instagram"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img
         src="/_assets/media/instagram-icon.png"
         alt="Instagram"
-        className="w-8 h-8"
+        className="w-8 h-8 hover:opacity-80 transition"
       />
     </a>
+
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/profile.php?id=61581079364429"
+      aria-label="Facebook"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="/_assets/media/facebook-icon.png"
+        alt="Facebook"
+        className="w-6 h-8 hover:opacity-80 transition"
+      />
+    </a>
+
+    {/* YouTube */}
     <a
       href="https://www.youtube.com/channel/UCWnj0KbClR3BJC7XXe3BEbQ"
       aria-label="YouTube"
@@ -436,7 +462,7 @@ export default function HomepageMain() {
       <img
         src="/_assets/media/youtube-icon.png"
         alt="YouTube"
-        className="w-10 h-10"
+        className="w-10 h-10 hover:opacity-80 transition"
       />
     </a>
   </div>
@@ -453,6 +479,8 @@ export default function HomepageMain() {
     <img src="/_assets/media/bfloor-logo.png" alt="Logo 3" className="h-10" />
     <img src="/_assets/media/mct-logo.png" alt="Logo 4" className="h-10" />
     <img src="/_assets/media/taco-logo.png" alt="Logo 5" className="h-8" />
+    {/* 新增的贊助商 Logo */}
+    <img src="/_assets/media/ALL LOGOS_white.png" alt="All Logos White" className="h-20" />
   </div>
 </div>
 
