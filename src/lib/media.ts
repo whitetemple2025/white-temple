@@ -12,4 +12,7 @@ export const VIDEO = {
     "https://lccuyzpvrtjxuebezmqh.supabase.co/storage/v1/object/public/videos/jellyfish.mp4?v=20250809",
   TEMPLE:
     "https://lccuyzpvrtjxuebezmqh.supabase.co/storage/v1/object/public/videos/temple.mp4",
+  TELE:
+    "https://lccuyzpvrtjxuebezmqh.supabase.co/storage/v1/object/public/videos/tele.mp4",
+    
 } as const;
