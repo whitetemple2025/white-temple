@@ -137,7 +137,7 @@ export default function ConfessPage() {
         preload="metadata"
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        src={VIDEO.CONFESS} // ← 改這裡
+        src={VIDEO.CONFESS2} // ← 改這裡
       />
       <div
         className="absolute inset-0"
