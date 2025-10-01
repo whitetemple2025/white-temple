@@ -108,19 +108,19 @@ export default function HomepageMain() {
       </section>
 
       {/* ===================== Section 2: The Doctrines ===================== */}
-      <section id="doctrines" className="relative overflow-hidden">
+      <section id="doctrines" className="relative overflow-hidden min-h-[640px]">
         {/* 背景：影片 */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          src={VIDEO.TELE}
-          style={{ filter: "saturate(1.08) contrast(1.06) brightness(0.98)" }}
-        />
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  aria-hidden
+  className="absolute inset-0 h-full w-full object-cover z-0"
+  src={VIDEO.TELE}
+  style={{ filter: "saturate(1.08) contrast(1.06) brightness(0.98)" }}
+/>
         <div className="soft-vignette" aria-hidden />
         <div className="section2-wash" aria-hidden />
 
@@ -135,7 +135,7 @@ export default function HomepageMain() {
               lineHeight: 1.05,
             }}
           >
-            The Doctrines
+            White Temple
           </h3>
 
           {/* 副標 */}
@@ -161,13 +161,10 @@ export default function HomepageMain() {
               lineHeight: 1.75,
             }}
           >
-            <p>To confess is not to seek pardon, but to reveal the fractures within the self.</p>
-            <p>The Temple does not absolve, it witnesses.</p>
-            <p>Sin is not action, but attachment. The need to be seen, to be right, to be pure.</p>
-            <p>Your voice is sacred. But only when spoken without defense.</p>
-            <p>The ritual begins when you hesitate. That moment is the doorway.</p>
-            <p>White is not purity. White is erasure, illusion, and the weight of ideals.</p>
-            <p>This temple has no god, only reflections.</p>
+            <p>White Temple is a digital temple constructed between the internet and a physical site. 
+              In this experimental theatre, which merges religious ritual with technological participation, 
+              the audience is invited to anonymously submit their own "sins" and take part in a collective 
+              ritual of confession and atonement.</p>
           </div>
 
           <p
