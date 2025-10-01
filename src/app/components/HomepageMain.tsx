@@ -158,7 +158,7 @@ export default function HomepageMain() {
             style={{
               color: "#f4efe5",
               fontSize: "clamp(15px, 1.6vw, 19px)",
-              lineHeight: 1.75,
+              lineHeight: 2.0,
             }}
           >
             <p>White Temple is a digital temple constructed between the internet and a physical site. 
