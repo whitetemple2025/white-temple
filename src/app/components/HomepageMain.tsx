@@ -11,7 +11,7 @@ export default function HomepageMain() {
     // ① 避免 fixed nav 蓋內容，含瀏海安全區
     <main className="w-full pt-[calc(env(safe-area-inset-top)+56px)] md:pt-[72px]">
       {/* Sticky Top Bar */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[var(--brand-blue)] text-white shadow-md">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[var(--brand-blue)] text-white shadow-none">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-end gap-6">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
