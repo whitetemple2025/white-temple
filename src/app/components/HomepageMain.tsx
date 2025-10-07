@@ -309,7 +309,7 @@ export default function HomepageMain() {
           Dujdao Vadhanapakorn
         </h4>
         <p
-          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold uppercase tracking-wide"
+          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold normal-case tracking-wide"
           style={{ color: "var(--brand-blue,#004a98)" }}
         >
           Dujdao Vadhanapakorn is a performance artist with a strong foundation 
@@ -382,7 +382,7 @@ export default function HomepageMain() {
           Chen Jun-yu
         </h4>
         <p
-          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold uppercase tracking-wide"
+          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold normal-case tracking-wide"
           style={{ color: "var(--neon-green,#b3fd71)" }}
         >
           Chen Jun-Yu is a Taiwanese artist specializing in live performance and video art. He uses his body
@@ -417,7 +417,7 @@ export default function HomepageMain() {
     {/* Email */}
     <div className="mb-8">
       <p className="uppercase font-bold text-sm tracking-widest">Email</p>
-      <p className="text-lg">WHITETEMPLE2025@GMAIL.COM</p>
+      <p className="text-lg">whitetemple2025@gmail.com</p>
     </div>
 
    {/* Social */}
