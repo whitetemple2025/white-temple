@@ -308,15 +308,17 @@ export default function HomepageMain() {
         >
           Dujdao Vadhanapakorn
         </h4>
-        <p
-          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold normal-case tracking-wide"
+         <p
+          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold tracking-wide text-justify"
           style={{ color: "var(--brand-blue,#004a98)" }}
         >
-          Dujdao Vadhanapakorn is a performance artist with a strong foundation 
-          in the performing arts, including theatre, site-specific work, and 
-          experiential performance. Since 2002, her participation with B-Floor Theatre—
-          one of Thailand’s leading contemporary theatre companies—has shaped her into 
-          a multifaceted artist with expertise in performance, direction, design, and production management.
+          Dujdao Vadhanapakorn is a performing artist with a background in psychotherapy 
+          and a strong foundation in the performing arts, including theatre, site-specific work, 
+          and experiential performance. Her signature artistic approach involves creating spaces 
+          for mental and emotional experiences, reflecting her expertise in human psychology. 
+          Since 2002, her involvement with B-Floor Theatre, one of Thailand’s leading contemporary 
+          theatre companies, has shaped her into a multifaceted artist skilled in performance, 
+          direction, design, and production management.
         </p>
       </div>
 
@@ -381,8 +383,8 @@ export default function HomepageMain() {
         >
           Chen Jun-yu
         </h4>
-        <p
-          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold normal-case tracking-wide"
+ <p
+          className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold tracking-wide text-justify"
           style={{ color: "var(--neon-green,#b3fd71)" }}
         >
           Chen Jun-Yu is a Taiwanese artist specializing in live performance and video art. He uses his body
