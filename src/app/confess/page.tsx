@@ -259,17 +259,7 @@ export default function ConfessPage() {
             </p>
           )}
 
-          {isSuccess && (
-            <div className="pt-2">
-              <Link
-                href="/view"
-                className="underline underline-offset-4 hover:opacity-85 transition"
-                style={{ color: '#f4efe5' }}
-              >
-                Go to View →
-              </Link>
-            </div>
-          )}
+          
         </form>
       </main>
 
