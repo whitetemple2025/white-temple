@@ -1,9 +1,8 @@
-// src/app/confess/page.tsx
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { VIDEO } from '@/lib/media'; // ← 新增：集中管理影片網址
+import { VIDEO } from '@/lib/media';
 
 export default function ConfessPage() {
   const [name, setName] = useState('');
@@ -24,12 +23,10 @@ export default function ConfessPage() {
     thaiChars: 120,
   } as const;
 
-  // Detect scripts
-  const hasCJK = /[\u3400-\u9FFF\uF900-\uFAFF]/.test(original); // CJK Unified + Compat
-  const hasThai = /[\u0E00-\u0E7F]/.test(original);             // Thai
+  const hasCJK = /[\u3400-\u9FFF\uF900-\uFAFF]/.test(original);
+  const hasThai = /[\u0E00-\u0E7F]/.test(original);
   const script: 'en' | 'cjk' | 'thai' = hasThai ? 'thai' : hasCJK ? 'cjk' : 'en';
 
-  // Counters
   const countWordsEN = (s: string) => (s.trim().match(/\b[A-Za-z']+\b/g)?.length ?? 0);
   const countGraphemes = (s: string, locale: string) => {
     try {
@@ -42,7 +39,7 @@ export default function ConfessPage() {
         return n;
       }
     } catch {}
-    return [...s].length; // fallback
+    return [...s].length;
   };
 
   const currentCount =
@@ -110,7 +107,6 @@ export default function ConfessPage() {
       setMessage('Your confession was sent. Your voice has been heard.');
       setIsSuccess(true);
 
-      // reset
       setName('');
       setOriginal('');
       setNameFocused(false);
@@ -137,7 +133,7 @@ export default function ConfessPage() {
         preload="metadata"
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        src={VIDEO.CONFESS2} // ← 改這裡
+        src={VIDEO.CONFESS2}
       />
       <div
         className="absolute inset-0"
@@ -145,7 +141,8 @@ export default function ConfessPage() {
         aria-hidden
       />
 
-      <main className="relative z-10 mx-auto w-full max-w-6xl px-6 py-8 md:py-12">
+      {/* Main content */}
+      <main className="relative z-10 mx-auto w-full max-w-6xl px-6 py-8 md:py-12 pb-[96px]">
         <Link
           href="/"
           className="inline-block mb-8 md:mb-14 font-semibold underline underline-offset-4 hover:opacity-85 transition"
@@ -155,13 +152,13 @@ export default function ConfessPage() {
         </Link>
 
         <h1
-          className="max-w-none whitespace-nowrap text-4xl md:text-6xl lg:text-7xl font-extrabold leading-none tracking-tight mb-20"
+          className="max-w-none text-[clamp(28px,7vw,56px)] md:text-6xl lg:text-7xl font-extrabold leading-none tracking-tight mb-12 md:mb-20"
           style={{ color: 'var(--neon-green, #b3fd71)' }}
         >
           Your sin shall be purified . . .
         </h1>
 
-        <form onSubmit={handleSubmit} className="max-w-3xl space-y-10">
+        <form onSubmit={handleSubmit} className="max-w-3xl space-y-8 md:space-y-10">
           {/* Name */}
           <div>
             <label
@@ -209,7 +206,7 @@ export default function ConfessPage() {
 
             <textarea
               id="confession"
-              rows={8}
+              rows={6}
               value={original}
               onChange={(e) => setOriginal(e.target.value)}
               onFocus={() => setConfFocused(true)}
@@ -218,7 +215,7 @@ export default function ConfessPage() {
               disabled={loading}
               className={`
                 w-full rounded-md px-5 py-4 text-lg md:text-xl outline-none
-                resize-y min-h-[200px]
+                resize-y min-h-[160px] md:min-h-[200px]
                 ring-1 ring-black/0 focus:ring-2 focus:ring-black/10
                 transition duration-300 ease-out transform-gpu
                 focus:scale-[1.01] shadow-none
@@ -235,7 +232,7 @@ export default function ConfessPage() {
               aria-required="true"
             />
 
-            {/* Rule hint + counter (always English) */}
+            {/* Rule hint + counter */}
             <div className="flex items-baseline justify-between mb-4">
               <span className="text-xs md:text-sm" style={{ color: '#f4efe5' }}>
                 {ruleHint}
@@ -258,29 +255,23 @@ export default function ConfessPage() {
               {message}
             </p>
           )}
-
-          
         </form>
       </main>
 
-      {/* Fixed action button at bottom-right of the viewport */}
+      {/* Fixed action button (bottom center) */}
       <button
         type="button"
         onClick={(e) => {
-          // 觸發 form 提交
           const form = document.querySelector('form');
-          if (form && !loading) {
-            form.requestSubmit();
-          }
+          if (form && !loading) form.requestSubmit();
         }}
         disabled={loading || overLimit || !original.trim()}
         className="
-          fixed right-6 bottom-8 md:right-10 md:bottom-12
-          rounded px-8 md:px-12 py-4 text-sm md:text-base
-          font-extrabold tracking-[0.25em] uppercase
+          fixed left-1/2 -translate-x-1/2 bottom-6
+          rounded-lg px-8 md:px-12 py-4
+          text-sm md:text-base font-extrabold tracking-[0.2em] uppercase
           shadow-md hover:shadow-lg active:scale-[0.99]
-          transition disabled:opacity-60 disabled:cursor-not-allowed
-          z-20
+          transition disabled:opacity-60 disabled:cursor-not-allowed z-20
         "
         style={{
           backgroundColor: 'var(--neon-green, #b3fd71)',
