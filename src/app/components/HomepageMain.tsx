@@ -478,6 +478,7 @@ export default function HomepageMain() {
     <img src="/_assets/media/taco-logo.png" alt="Logo 5" className="h-8" />
     {/* 新增的贊助商 Logo */}
     <img src="/_assets/media/ALL LOGOS_white.png" alt="All Logos White" className="h-20" />
+    <img src="/_assets/media/BTF_text logo-white.png" alt="BTF Logo White" className="h-10" />
   </div>
 </div>
 
