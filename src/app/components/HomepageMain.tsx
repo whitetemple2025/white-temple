@@ -18,9 +18,12 @@ export default function HomepageMain() {
           >
             Home
           </button>
-          <a href="/view" className="font-semibold hover:text-[var(--neon-green)] transition">
-            View
-          </a>
+<a
+  href="/view"
+  className="font-semibold hover:text-[var(--neon-green)] transition hidden"
+>
+  View
+</a>
         </div>
       </nav>
 
