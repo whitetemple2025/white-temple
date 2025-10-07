@@ -312,11 +312,11 @@ export default function HomepageMain() {
           className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold uppercase tracking-wide"
           style={{ color: "var(--brand-blue,#004a98)" }}
         >
-          DUJDAO VADHANAPAKORN IS A PERFORMANCE ARTIST WITH A STRONG FOUNDATION IN THE
-          PERFORMING ARTS, INCLUDING THEATRE, SITE-SPECIFIC WORK, AND EXPERIENTIAL PERFORMANCE.
-          SINCE 2002, HER PARTICIPATION WITH B-FLOOR THEATRE—ONE OF THAILAND’S LEADING
-          CONTEMPORARY THEATRE COMPANIES—HAS SHAPED HER INTO A MULTIFACETED ARTIST WITH
-          EXPERTISE IN PERFORMANCE, DIRECTION, DESIGN, AND PRODUCTION MANAGEMENT.
+          Dujdao Vadhanapakorn is a performance artist with a strong foundation 
+          in the performing arts, including theatre, site-specific work, and 
+          experiential performance. Since 2002, her participation with B-Floor Theatre—
+          one of Thailand’s leading contemporary theatre companies—has shaped her into 
+          a multifaceted artist with expertise in performance, direction, design, and production management.
         </p>
       </div>
 
@@ -385,12 +385,12 @@ export default function HomepageMain() {
           className="text-[14px] md:text-[16px] leading-relaxed md:leading-[1.7] font-bold uppercase tracking-wide"
           style={{ color: "var(--neon-green,#b3fd71)" }}
         >
-          CHEN JUN-YU IS A TAIWANESE ARTIST SPECIALIZING IN LIVE PERFORMANCE AND VIDEO ART. HE USES HIS BODY
-          AS AN ORGANIC VEHICLE FOR THE EXTENSION OF COGNITIVE POWER, CREATING VISUAL METAPHORS THAT EXPLORE
-          THE COLLISION BETWEEN SELF, SOCIETY, AND ENVIRONMENT. THROUGH SOFT, SLOW MENTAL AND PHYSICAL
-          EXHAUSTION, HIS PERFORMANCES REVEAL DILEMMAS OF CULTURAL IDENTITY AND SOCIAL MECHANISMS. BY
-          INTEGRATING EVERYDAY ELEMENTS, HE HUMOROUSLY DECONSTRUCTS RIGID CULTURAL SYMBOLS, TRANSFORMING ART
-          INTO A FLUID, EVOLVING PROCESS THAT QUESTIONS THE PERSISTENCE OF THE EMBODIED SELF.
+          Chen Jun-Yu is a Taiwanese artist specializing in live performance and video art. He uses his body
+          as an organic vehicle for the extension of cognitive power, creating visual metaphors that explore
+          the collision between self, society, and environment. Through soft, slow mental and physical
+          exhaustion, his performances reveal dilemmas of cultural identity and social mechanisms. By
+          integrating everyday elements, he humorously deconstructs rigid cultural symbols, transforming art
+          into a fluid, evolving process that questions the persistence of the embodied self.
         </p>
       </div>
     </div>
