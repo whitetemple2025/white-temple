@@ -247,7 +247,7 @@ export default function HomepageMain() {
 
             <div className="flex flex-col gap-4 md:gap-5 md:items-end self-end">
               <a
-                href="#tickets"
+                href="https://www.ticketmelon.com/whitetempleproject/whitetempleproject2025/"
                 className="w-full md:w-[360px] text-center px-6 py-4 rounded-xl font-extrabold tracking-[0.14em] uppercase ring-1 ring-white/15 hover:scale-[1.02] transition"
                 style={{ background: "linear-gradient(90deg, var(--gradient-start,#0097b2), var(--gradient-end,#7ed957))", color: "#ffffff" }}
               >
