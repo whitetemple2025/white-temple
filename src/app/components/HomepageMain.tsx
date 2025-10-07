@@ -30,162 +30,159 @@ export default function HomepageMain() {
       </nav>
 
       {/* ===================== Section 1: Hero ===================== */}
-      {/* ② 用 svh 提升行動裝置高度表現 */}
-      <section className="relative min-h-[70svh] md:min-h-[760px] overflow-hidden">
-        {/* 背景影片：加 poster、維持 playsInline/muted */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/_assets/media/temple-poster.jpg"
-          aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-          src={VIDEO.TEMPLE}
-          style={{ filter: "brightness(0.92) contrast(1.08) saturate(1.18)" }}
-        />
-        {/* 薄霧提對比 */}
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(72% 56% at 50% 46%, rgba(0,0,0,0) 0%, rgba(0,23,60,0.22) 55%, rgba(0,23,60,0.44) 100%)",
-          }}
-        />
-        {/* 標題（手機可換行；桌機才 nowrap） */}
-        <div className="relative z-10 mx-auto w-full max-w-[1366px] px-6 pt-[75px] md:pt-[95px]">
-          <h1
-            className="font-extrabold tracking-tight md:whitespace-nowrap drop-shadow-[0_3px_14px_rgba(0,0,0,0.35)]"
-            style={{
-              color: "var(--neon-green, #b3fd71)",
-              lineHeight: 0.95,
-              fontSize: "clamp(36px, 7vw, 104px)",
-              letterSpacing: "-0.01em",
-            }}
-          >
-            White Temple
-          </h1>
-        </div>
-        {/* 副標＋按鈕（固定貼在影片下緣） */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-10 w-full max-w-[1366px] px-6 z-10">
-          <div className="grid items-end gap-6 md:gap-10 md:grid-cols-[minmax(0,1fr)_420px]">
-            {/* 三行文字 */}
-            <p
-              className="max-w-[700px] font-semibold drop-shadow-[0_3px_14px_rgba(0,0,0,0.35)]"
-              style={{
-                color: "var(--neon-green, #b3fd71)",
-                fontSize: "clamp(18px, 2.1vw, 28px)",
-                lineHeight: 1.22,
-              }}
-            >
-              A Digital Temple<br />
-              constructed between<br />
-              the internet and a physical site.
-            </p>
-            {/* 兩顆較小的按鈕：手機較小字距，桌機較大 */}
-            <div className="flex flex-col items-stretch md:items-end gap-4">
-              <button
-                onClick={() => scrollToSection("doctrines")}
-                className="w-full md:w-[420px] rounded-xl px-7 py-4 text-center font-extrabold uppercase shadow hover:scale-[1.015] active:scale-[0.995] transition tracking-[0.08em] md:tracking-[0.22em]"
-                style={{
-                  backgroundColor: "var(--neon-green, #b3fd71)",
-                  color: "var(--brand-blue, #004a98)",
-                }}
-              >
-                ENTER TEMPLE
-              </button>
+      <section
+  className="relative min-h-[70svh] md:min-h-[760px] overflow-hidden bg-[var(--brand-blue,#004a98)]"
+  style={{ marginTop: "-1px" }}
+>
+  {/* 背景影片 */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    poster="/_assets/media/temple-poster.jpg"
+    aria-hidden
+    className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+    src={VIDEO.TEMPLE}
+    style={{ filter: "brightness(0.92) contrast(1.08) saturate(1.18)" }}
+  />
 
-              <a
-                href="/confess"
-                className="w-full md:w-[420px] rounded-xl px-7 py-4 text-center font-extrabold uppercase shadow hover:scale-[1.015] active:scale-[0.995] transition tracking-[0.08em] md:tracking-[0.22em]"
-                style={{
-                  backgroundColor: "var(--neon-green, #b3fd71)",
-                  color: "var(--brand-blue, #004a98)",
-                }}
-              >
-                PURIFICATION
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* 標題（手機置中、桌機左對齊） */}
+  <div className="relative z-10 mx-auto w-full max-w-[1366px] px-6 pt-[75px] md:pt-[95px]">
+    <h1
+      className="font-extrabold tracking-tight text-center md:text-left drop-shadow-[0_3px_14px_rgba(0,0,0,0.35)]"
+      style={{
+        color: "var(--neon-green, #b3fd71)",
+        lineHeight: 0.95,
+        fontSize: "clamp(36px, 7vw, 104px)",
+        letterSpacing: "-0.01em",
+      }}
+    >
+      White Temple
+    </h1>
+  </div>
+
+  {/* 副標＋按鈕（貼底區） */}
+  <div className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-10 w-full max-w-[1366px] px-6 z-10">
+    <div className="grid items-end gap-6 md:gap-10 md:grid-cols-[minmax(0,1fr)_420px]">
+      <p
+        className="max-w-[700px] font-semibold drop-shadow-[0_3px_14px_rgba(0,0,0,0.35)]"
+        style={{
+          color: "var(--neon-green, #b3fd71)",
+          fontSize: "clamp(18px, 2.1vw, 28px)",
+          lineHeight: 1.22,
+        }}
+      >
+        A Digital Temple<br />
+        constructed between<br />
+        the internet and a physical site.
+      </p>
+
+      <div className="flex flex-col items-stretch md:items-end gap-4">
+        <button
+          onClick={() => scrollToSection("doctrines")}
+          className="w-full md:w-[420px] rounded-xl px-7 py-4 text-center font-extrabold uppercase shadow hover:scale-[1.015] active:scale-[0.995] transition tracking-[0.08em] md:tracking-[0.22em]"
+          style={{
+            backgroundColor: "var(--neon-green, #b3fd71)",
+            color: "var(--brand-blue, #004a98)",
+          }}
+        >
+          ENTER TEMPLE
+        </button>
+
+        <a
+          href="/confess"
+          className="w-full md:w-[420px] rounded-xl px-7 py-4 text-center font-extrabold uppercase shadow hover:scale-[1.015] active:scale-[0.995] transition tracking-[0.08em] md:tracking-[0.22em]"
+          style={{
+            backgroundColor: "var(--neon-green, #b3fd71)",
+            color: "var(--brand-blue, #004a98)",
+          }}
+        >
+          PURIFICATION
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ===================== Section 2: The Doctrines ===================== */}
-      <section id="doctrines" className="relative overflow-hidden min-h-[60svh]">
-        {/* 背景：影片（加 poster） */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/_assets/media/tele-poster.jpg"
-          aria-hidden
-          className="absolute inset-0 h-full w-full object-cover z-0"
-          src={VIDEO.TELE}
-          style={{ filter: "saturate(1.08) contrast(1.06) brightness(0.98)" }}
-        />
-        <div className="soft-vignette" aria-hidden />
-        <div className="section2-wash" aria-hidden />
+      <section id="doctrines" className="relative overflow-hidden min-h-[60svh] pt-6 md:pt-10">
+  {/* 背景影片 */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    poster="/_assets/media/tele-poster.jpg"
+    aria-hidden
+    className="absolute inset-0 h-full w-full object-cover z-0"
+    src={VIDEO.TELE}
+    style={{ filter: "saturate(1.08) contrast(1.06) brightness(0.98)" }}
+  />
 
-        {/* 內容 */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-18 md:py-28 text-center">
-          {/* 主標 */}
-          <h3
-            className="font-extrabold tracking-tight"
-            style={{
-              color: "var(--neon-green)",
-              fontSize: "clamp(32px, 5vw, 52px)",
-              lineHeight: 1.05,
-            }}
-          >
-            White Temple
-          </h3>
+  <div className="soft-vignette" aria-hidden />
+  <div className="section2-wash" aria-hidden />
 
-          {/* 副標 */}
-          <p
-            className="mt-3 font-semibold opacity-95"
-            style={{
-              color: "var(--neon-green)",
-              fontSize: "clamp(15px, 2.2vw, 22px)",
-              lineHeight: 1.4,
-              letterSpacing: ".01em",
-            }}
-          >
-            Sacred teachings that guide the path<br className="hidden md:inline" />
-            through the digital temple
-          </p>
+  {/* 內容容器：上留空間、底部留白距 */}
+  <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-20 md:pt-36 md:pb-32 text-center">
+    {/* 主標 */}
+    <h3
+      className="font-extrabold tracking-tight"
+      style={{
+        color: "var(--neon-green)",
+        fontSize: "clamp(32px, 5vw, 52px)",
+        lineHeight: 1.05,
+      }}
+    >
+      White Temple
+    </h3>
 
-          {/* 宣言文字：手機字級微小、行高加大 */}
-          <div
-            className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide"
-            style={{
-              color: "#f4efe5",
-              fontSize: "clamp(14px, 1.6vw, 19px)",
-              lineHeight: 2.0,
-            }}
-          >
-            <p>
-              White Temple is a digital temple constructed between the internet and a physical site.
-              In this experimental theatre, which merges religious ritual with technological participation,
-              the audience is invited to anonymously submit their own "sins" and take part in a collective
-              ritual of confession and atonement.
-            </p>
-          </div>
+    {/* 副標 */}
+    <p
+      className="mt-4 font-semibold opacity-95"
+      style={{
+        color: "var(--neon-green)",
+        fontSize: "clamp(15px, 2.2vw, 22px)",
+        lineHeight: 1.4,
+        letterSpacing: ".01em",
+      }}
+    >
+      Sacred teachings that guide the path<br className="hidden md:inline" />
+      through the digital temple
+    </p>
 
-          <p
-            className="mt-9 md:mt-12 font-extrabold uppercase tracking-[0.12em] md:tracking-[0.16em]"
-            style={{
-              color: "var(--neon-green)",
-              fontSize: "clamp(13px, 1.6vw, 18px)",
-            }}
-          >
-            Enter with understanding, leave with wisdom
-          </p>
-        </div>
-      </section>
+    {/* 宣言文字 */}
+    <div
+      className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide"
+      style={{
+        color: "#f4efe5",
+        fontSize: "clamp(14px, 1.6vw, 19px)",
+        lineHeight: 2.0,
+      }}
+    >
+      <p>
+        White Temple is a digital temple constructed between the internet and a physical site.
+        In this experimental theatre, which merges religious ritual with technological participation,
+        the audience is invited to anonymously submit their own "sins" and take part in a collective
+        ritual of confession and atonement.
+      </p>
+    </div>
+
+    {/* 結尾標語：下方留更多空間 */}
+    <p
+      className="mt-10 md:mt-14 font-extrabold uppercase tracking-[0.12em] md:tracking-[0.16em]"
+      style={{
+        color: "var(--neon-green)",
+        fontSize: "clamp(13px, 1.6vw, 18px)",
+      }}
+    >
+      Enter with understanding, leave with wisdom
+    </p>
+  </div>
+</section>
+
 
       {/* ===================== Section 3: Ceremony ===================== */}
       <section
