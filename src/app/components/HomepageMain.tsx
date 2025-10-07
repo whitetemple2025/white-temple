@@ -30,7 +30,7 @@ export default function HomepageMain() {
       </nav>
 
       {/* ===================== Section 1: Hero ===================== */}
-      <section
+<section
   className="relative min-h-[70svh] md:min-h-[760px] overflow-hidden bg-[var(--brand-blue,#004a98)]"
   style={{ marginTop: "-1px" }}
 >
