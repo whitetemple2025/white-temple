@@ -162,6 +162,8 @@ export default function HomepageMain() {
     color: "#f4efe5",
     fontSize: "clamp(15px, 1.7vw, 20px)",
     lineHeight: 2.0,
+    fontWeight: 700,
+    textShadow: "0 0 6px rgba(255,255,255,0.3)", // 柔光外緣
   }}
 >
   <p>
