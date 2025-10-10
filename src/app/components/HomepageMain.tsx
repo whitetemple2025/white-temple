@@ -125,7 +125,7 @@ export default function HomepageMain() {
   />
 
 {/* 加一層半透明黑遮罩 */}
-<div className="absolute inset-0 bg-black/40 z-[1]" aria-hidden />
+<div className="absolute inset-0 bg-black/30 z-[1]" aria-hidden />
   <div className="soft-vignette" aria-hidden />
   <div className="section2-wash" aria-hidden />
 
@@ -159,12 +159,12 @@ export default function HomepageMain() {
 
     {/* 宣言文字 */}
 <div
-  className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide font-medium"
+  className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide"
   style={{
     color: "#f4efe5",
     fontSize: "clamp(15px, 1.7vw, 20px)",
     lineHeight: 2.0,
-    fontWeight: 700,
+    fontWeight: 600,
     textShadow: "0 0 6px rgba(255,255,255,0.3)", // 柔光外緣
   }}
 >
