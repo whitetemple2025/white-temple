@@ -158,7 +158,7 @@ export default function HomepageMain() {
     </p>
 
     {/* 宣言文字 */}
-<div className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide font-medium" style={{ color: "#f4efe5", fontSize: "clamp(14px, 1.6vw, 19px)", lineHeight: 2.0, }} >
+<div className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide font-medium" style={{ color: "#f4efe5", fontSize: "clamp(14px, 1.6vw, 19px)", lineHeight: 2.0, fontWeight: 500, }} >
   <p>
     White Temple is a digital temple constructed between the internet and a physical site.
     In this experimental theatre, which merges religious ritual with technological participation,
