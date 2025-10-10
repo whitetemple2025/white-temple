@@ -157,10 +157,10 @@ export default function HomepageMain() {
 
     {/* 宣言文字 */}
 <div
-  className="mt-9 md:mt-11 space-y-4 md:space-y-3.5 tracking-wide font-semibold"
+  className="mt-9 md:mt-11 space-y-3 md:space-y-3.5 tracking-wide font-medium"
   style={{
     color: "#f4efe5",
-    fontSize: "clamp(14px, 1.6vw, 19px)",
+    fontSize: "clamp(15px, 1.7vw, 20px)",
     lineHeight: 2.0,
   }}
 >
