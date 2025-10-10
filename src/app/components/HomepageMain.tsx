@@ -124,6 +124,8 @@ export default function HomepageMain() {
     style={{ filter: "saturate(1.08) contrast(1.06) brightness(0.98)" }}
   />
 
+{/* 加一層半透明黑遮罩 */}
+<div className="absolute inset-0 bg-black/40 z-[1]" aria-hidden />
   <div className="soft-vignette" aria-hidden />
   <div className="section2-wash" aria-hidden />
 
