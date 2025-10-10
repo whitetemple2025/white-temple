@@ -157,7 +157,7 @@ export default function HomepageMain() {
 
     {/* 宣言文字 */}
 <div
-  className="mt-9 md:mt-11 space-y-4 md:space-y-3.5 tracking-wide font-bold"
+  className="mt-9 md:mt-11 space-y-4 md:space-y-3.5 tracking-wide font-semibold"
   style={{
     color: "#f4efe5",
     fontSize: "clamp(14px, 1.6vw, 19px)",
