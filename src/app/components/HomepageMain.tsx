@@ -493,7 +493,7 @@ export default function HomepageMain() {
               <img src="/_assets/media/bfloor-logo.png" alt="Logo 3" className="h-8 sm:h-10" loading="lazy" decoding="async" />
               <img src="/_assets/media/mct-logo.png" alt="Logo 4" className="h-8 sm:h-10" loading="lazy" decoding="async" />
               <img src="/_assets/media/taco-logo.png" alt="Logo 5" className="h-7 sm:h-8" loading="lazy" decoding="async" />
-              <img src="/_assets/media/JTAC_Logo.png" alt="JTAC Logo" className="h-7 sm:h-8" loading="lazy" decoding="async" />
+              <img src="/_assets/media/JTAC_Logo.png" alt="JTAC Logo" className="h-9 sm:h-8" loading="lazy" decoding="async" />
               <img src="/_assets/media/ALL LOGOS_white.png" alt="All Logos White" className="h-16 sm:h-20" loading="lazy" decoding="async" />
               <img src="/_assets/media/BTF_text logo-white.png" alt="BTF Logo White" className="h-9 sm:h-10" loading="lazy" decoding="async" />
             </div>
